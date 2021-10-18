@@ -1,5 +1,6 @@
 # Kursu_Valiutu_Portalas
 Kursu valiutiu portalas naudojant H2, JAVA, MAVEN, QUARTZ ir lb.lt puslapio API
+Projektas po paleidimo randamas šiame url http://localhost:8080/Valiutu_kursu_portalas
 
 # Informacija apie projekta
 
