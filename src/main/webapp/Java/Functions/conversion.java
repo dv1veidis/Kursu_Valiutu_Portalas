@@ -9,11 +9,11 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 @WebServlet("/conversion")
-public class conversion extends HttpServlet {
+public class conversion extends HttpServlet { // sukuriamas Http requestas po kurio mus nuveda prie grazintu valiutu keitimo rezultatu
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.getParameter("conversionAmount");
         double conversionAmount = Double.parseDouble(request.getParameter("conversionAmount"));
-        String currency1 = request.getParameter("currency1");
+        String currency1 = request.getParameter("currency1"); // paduodami 3 duomenys tai yra kiekis ir musu pasirinktos valiutos
         String currency2 = request.getParameter("currency2");
         double conversion = 0;
         try {
@@ -22,7 +22,7 @@ public class conversion extends HttpServlet {
             e.printStackTrace();
         }
         String url = "http://localhost:8080/Valiutu_kursu_portalas/";
-        response.setContentType("text/html");
+        response.setContentType("text/html"); // Nuvedame vartotoja i /conversion url ir graziname jam jo ivesta suma pasirinktas valiutas ir galutini pavertima
         PrintWriter out= response.getWriter();
         out.println(conversionAmount);
         out.println(currency1+" converted to ");
